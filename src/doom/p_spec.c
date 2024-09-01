@@ -1567,8 +1567,17 @@ void P_SpawnSpecials (void)
                                    M_StringJoin("Too many scrollers! (", CRL_LimitsName,
                                    " crashes here)", NULL), MESSAGETICS);
 	    }
-
 	    break;
+		case 85:
+	    linespeciallist[numlinespecials] = &lines[i];
+	    numlinespecials++;
+	    CRL_lineanims_counter++;
+			// [RS] Print warning in console.
+			{
+				CRL_printf("Boom Feature: 'Scrolling Wall (Right)' is used", true);
+				
+			}
+		break;
 	}
     }
 
